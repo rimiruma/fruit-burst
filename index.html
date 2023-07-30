@@ -12,13 +12,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
 
+
+
+  
+
 </head>
 
 <body>
 
-  <section>
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
+
+  <section class="mx-5 my-5">
+    <div class="navbar bg-red-500 rounded-full text-white">
+      <div class="navbar-start hidden sm:block">
         <ul class="menu menu-horizontal px-1">
           <li><a>Home</a></li>
           <li>
@@ -29,19 +34,37 @@
         </ul>
 
       </div>
-      <div class="navbar-center hidden lg:flex">
+
+      <div class="navbar-center flex">
         <img width="54" height="60" src="./images/logo.png">
         <a class="btn btn-ghost normal-case text-xl">Fruit Burst</a>
       </div>
-      <div class="navbar-end">
-        <div class="form-control">
-          <input type="text" placeholder="Search here" class="input input-bordered rounded-3xl w-72 " />
-        </div>
-      </div>
+
+      <!-- Hamburger menu: Visible only on small screens -->
+<div class="lg:hidden absolute right-8 top-11">
+  <button class="btn btn-ghost">
+    <i class="fas fa-bars text-xl"></i>
+  </button>
+</div>
+
+
+<div  class="navbar-end mr-4 ">
+
+  <div class="hidden sm:block">
+    <div class="form-control relative">
+      <input type="text" placeholder="Search here" class="input input-bordered rounded-3xl w-72 pr-12" />
+      <button type="button" class="absolute right-2 top-1/2 transform -translate-y-1/2">
+        <i class="fas fa-search mr-4 text-gray-600"></i>
+      </button>
+    </div>
+  </div>
+</div>
+      
+      
     </div>
   </section>
 
-  <section>
+  <section class="mx-5">
     <div class="carousel w-full">
       <div id="slide1" class="carousel-item relative w-full">
         <img src="./images/banner1.png" class="w-full" />
@@ -74,7 +97,33 @@
     </div>
   </section>
 
-  <section class="mx-20 bg-white mt-[-50px]">
+  <section class="mx-20 drop-shadow-lg hidden sm:block bg-white p-10 mt-[-50px] relative z-10">
+    <div class="grid grid-cols-5 gap-5">
+      <div>
+        <img class="mx-auto" src="./images/fruit1.png">
+        <p class="text-center">Strawberry</p>
+      </div>
+      <div>
+        <img class="mx-auto" src="./images/fruit2.png">
+        <p class="text-center">Orange</p>
+      </div>
+      <div>
+        <img class="mx-auto" src="./images/fruit3.png">
+        <p class="text-center">Mango</p>
+      </div>
+      <div>
+        <img class="mx-auto" src="./images/fruit4.png">
+        <p class="text-center">Strawberry</p>
+      </div>
+      <div>
+        <img class="mx-auto" src="./images/fruit5.png">
+        <p class="text-center">Mango</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- <section class="mx-20 bg-white mt-[-50px]">
     <div class="grid grid-cols-5 gap-5">
       <div>
         <img src="./images/fruit1.png">
@@ -98,10 +147,11 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <section class="mx-10 my-24">
     <div class="grid grid-cols-2 gap-4 mb-5">
+      <!-- <div class="grid grid-flow-col grid-cols-1 md:grid-cols-2 gap-5"> -->
 
       <div>
         <h1 class="text-3xl font-bold mb-3">
@@ -222,6 +272,10 @@
       <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded ">Show All</button>
     </div>
   </section>
+
+
+
+
 
   <section class="mx-10">
     <!-- <div  class="bg-cover bg-center h-[600px]" style="background-image: url('./images/team.png'); background-color: rgba(18, 18, 18, 0.70);">
@@ -554,7 +608,7 @@
 
       </div>
       <div>
-        <div class="grid grid-flow-col gap-4">
+        <div class="grid grid-flow-col gap-5">
           <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
               <path
                 d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
